@@ -2,7 +2,7 @@ SELECT
     o.order_id,
     o.customer_id,
     o.order_date,
-    o.status,
+    LOWER(TRIM(o.status)) AS status,
     o.order_amount,
     o.created_at,
     o.updated_at
